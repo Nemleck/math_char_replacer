@@ -13,13 +13,21 @@ def load_keys():
     
     return data
 
-def is_written(text: str, last_keys: list[str], lower_case=False):
-    last_text = "".join(last_keys)
+def is_written(text: str | list[str], last_keys: list[str], lower_case=False):
+    if type(text) is str:
+        last_text = "".join(last_keys)
 
-    if lower_case:
-        return last_text.lower().endswith(text.replace(" ", "").lower())
+        if lower_case:
+            return last_text.lower().endswith(text.replace(" ", "").lower())
+        else:
+            return last_text.endswith(text.replace(" ", ""))
     else:
-        return last_text.endswith(text.replace(" ", ""))
+        check = True
+        for key in text:
+            if not keyboard.is_pressed(key):
+                check = False
+        
+        return check
 
 def write(text: list[str] | str):
     if type(text) is str:

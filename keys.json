@@ -21,6 +21,10 @@
             "params": ["keep_text"]
         },
         {
+            "input": ["ctrl", "²"],
+            "output": ["ctrl", "a"]
+        },
+        {
             "input": "===",
             "output": "⇔"
         },
