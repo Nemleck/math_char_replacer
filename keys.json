@@ -1,0 +1,46 @@
+{
+    "global_params": {
+        "max_keys": 50
+    },
+    
+    "special_keys": {
+        "end": "²end",
+        "reload": "²r",
+        "on": "²on",
+        "off": "²off"
+    },
+
+    "keys": [
+        {
+            "input": "sqrt",
+            "output": "√"
+        },
+        {
+            "input": "hey",
+            "output": ["ctrl", "a"],
+            "params": ["keep_text"]
+        },
+        {
+            "input": "===",
+            "output": "⇔"
+        },
+        {
+            "input": "inter",
+            "output": "⋂"
+        },
+        {
+            "input": "union",
+            "output": "⋃"
+        },
+        {
+            "input": "²sent1",
+            "output": "You can also make pre-written sentences !",
+            "params": ["accept_lower_and_upper_case"]
+        },
+        {
+            "input": "You can also",
+            "output": " make auto-completion.",
+            "params": ["keep_text", "accept_lower_and_upper_case"]
+        }
+    ]
+}
