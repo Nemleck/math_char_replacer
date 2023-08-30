@@ -50,14 +50,15 @@ while not stop:
     
     # Analyse all special keys
     for event in params["special_keys"].keys():
-        if type(params["special_keys"][event]) is list:
+        value = params["special_keys"][event]
+        if type(value) is list:
             check = True
             for letter in event:
                 if not keyboard.is_pressed(letter):
                     check = False
                     break
         else:
-            check = is_written(params["special_keys"][event], last_keys)
+            check = is_written(value, last_keys)
         
         if check:
             # Events
@@ -86,11 +87,13 @@ while not stop:
             else:
                 msg = "What is supposed to be this event ?"
 
-            remove(len(event))
+            remove(len(value))
             write(msg)
 
             sleep(0.5)
             remove(len(msg))
+
+            del last_keys[-1 * len(value)]
     
     # Avoid double keys
     keyboard.read_key()

@@ -11,7 +11,8 @@
     },
 
     "external_keys": [
-        "math.json"
+        "math.json",
+        "autocompletion.json"
     ],
 
     "keys": [

@@ -1,0 +1,17 @@
+[
+    {
+        "input": "Nem",
+        "output": "Nemleck",
+        "params": ["accept_lower_and_upper_case"]
+    },
+    {
+        "input": "PaulM",
+        "output": "CPE91",
+        "params": ["keep_text"]
+    },
+    {
+        "input": "accept",
+        "output": "_lower_and_upper_case",
+        "params": ["keep_text"]
+    }
+]
