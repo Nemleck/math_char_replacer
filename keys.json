@@ -10,11 +10,11 @@
         "off": "²off"
     },
 
+    "external_keys": [
+        "math.json"
+    ],
+
     "keys": [
-        {
-            "input": "sqrt",
-            "output": "√"
-        },
         {
             "input": "hey",
             "output": ["ctrl", "a"],
@@ -23,18 +23,6 @@
         {
             "input": ["ctrl", "²"],
             "output": ["ctrl", "a"]
-        },
-        {
-            "input": "===",
-            "output": "⇔"
-        },
-        {
-            "input": "inter",
-            "output": "⋂"
-        },
-        {
-            "input": "union",
-            "output": "⋃"
         },
         {
             "input": "²sent1",

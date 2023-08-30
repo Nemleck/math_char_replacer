@@ -74,3 +74,45 @@ These are the special events :
 - The "on" makes you able the able again then programm to replace what you type.
 
 *Note that adding events make you able to use it, but it won't do anything. If you want to add keys, please do that in the "keys" property.*
+
+# Add external key files
+
+When you add new keys, you may want to organise your keys. That's why you can now add external files with new keys.
+
+`math.json`
+```json
+[
+    {
+        "input": "sqrt",
+        "output": "√"
+    },
+    {
+        "input": "===",
+        "output": "⇔"
+    },
+    {
+        "input": "inter",
+        "output": "⋂"
+    },
+    {
+        "input": "union",
+        "output": "⋃"
+    }
+]
+```
+
+In this new file, you just have to list your keys, same as before, but in the root of the file.
+
+Also, to add the file as an external file, you have to edit the `keys.json`
+Here is what you may want to put in this :
+
+`keys.json`
+```json
+"external_keys": [
+    "math.json"
+],
+```
+
+This property is added in the root of the file, but as it's already added in the demo, you can just use it like this.
+
+In this property, we set a list of all the external files of keys. Here I put the `math.json`, to make it connected.

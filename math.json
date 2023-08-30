@@ -1,0 +1,18 @@
+[
+    {
+        "input": "sqrt",
+        "output": "√"
+    },
+    {
+        "input": "===",
+        "output": "⇔"
+    },
+    {
+        "input": "inter",
+        "output": "⋂"
+    },
+    {
+        "input": "union",
+        "output": "⋃"
+    }
+]

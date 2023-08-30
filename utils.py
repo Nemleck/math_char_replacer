@@ -11,6 +11,16 @@ def load_keys():
         if not "params" in key:
             key["params"] = []
     
+    for file in data["external_keys"]:
+        with open(file, "r", encoding="utf-8") as f:
+            external_data = json.loads(f.read())
+
+            for key in external_data:
+                if not "params" in key:
+                    key["params"] = []
+
+            data["keys"] += external_data
+    
     return data
 
 def is_written(text: str | list[str], last_keys: list[str], lower_case=False):
