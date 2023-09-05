@@ -11,7 +11,12 @@ on = True
 
 stop = False
 while not stop:
-    key = keyboard.read_key()
+    key_event = keyboard.read_event()
+    key = key_event.name
+
+    # Avoid double keys
+    if (key_event.event_type == keyboard.KEY_UP):
+        continue
 
     # Normal key
     if len(key) == 1:
@@ -94,6 +99,3 @@ while not stop:
             remove(len(msg))
 
             del last_keys[-1 * len(value)]
-    
-    # Avoid double keys
-    keyboard.read_key()

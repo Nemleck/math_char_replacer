@@ -5,13 +5,17 @@
         "params": ["accept_lower_and_upper_case"]
     },
     {
-        "input": "PaulM",
-        "output": "CPE91",
-        "params": ["keep_text"]
+        "input": "paulm",
+        "output": "PaulMCPE91",
+        "params": ["accept_lower_and_upper_case"]
     },
     {
         "input": "accept",
         "output": "_lower_and_upper_case",
         "params": ["keep_text"]
+    },
+    {
+        "input": "lorem",
+        "output": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
     }
 ]

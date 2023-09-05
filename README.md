@@ -1,12 +1,12 @@
-# Programm Presentation
+# program Presentation
 
-This programm can replace what you write (ex: sqrt) with the actual character (for this example, √)
+This program can replace what you write (ex: sqrt) with the actual character (for this example, √), or something else.
 
 # Keys Configuration
 
 You can use the presets, but also make your events.
 
-`keys.json`
+`part of keys.json`
 ```json
 {
     "input": "sqrt",
@@ -15,11 +15,11 @@ You can use the presets, but also make your events.
 }
 ```
 
-In this example, every times you will write "sqrt", it will be replaced with √.
+In this example, every times you write "sqrt", it will be replaced with √.
 
-The parameter "accept_lower_and_upper_case" makes the programm accept lower AND upper cases. This means you can write "sqrt" but also "SqRt", or "SQRT", and so on.
+The parameter "accept_lower_and_upper_case" makes the program accept lower AND upper cases for the input. This means you can write "sqrt" but also "SqRt", or "SQRT", and so on.
 
-`keys.json`
+`part of keys.json`
 ```json
 {
     "input": "This is ",
@@ -28,12 +28,12 @@ The parameter "accept_lower_and_upper_case" makes the programm accept lower AND 
 }
 ```
 
-In this example, we add the parameter "keep_text", that makes the programm no longer remove what you write (here "This is ").
+In this example, we add the parameter "keep_text", that makes the program no longer remove what you write (here "This is ").
 This allows you to make autocompletion, for example.
 
 ## Adding key combination
 
-`keys.json`
+`part of keys.json`
 ```json
 {
     "input": "hey",
@@ -42,9 +42,9 @@ This allows you to make autocompletion, for example.
 },
 ```
 
-Here, writing "hey" makes you able to select all the text. All you need to know to do that is that it only works in lists.
+With this, writting "hey" makes you able now to select all the text (with ctrl + a), and keeps the hey you you wrote with the "keep_text" parameter.
 
-`keys.json`
+`part of keys.json`
 ```json
 {
     "input": ["ctrl", "²"],
@@ -52,11 +52,11 @@ Here, writing "hey" makes you able to select all the text. All you need to know 
 },
 ``` 
 
-Conversely, we can make ctrl inputs, that makes either ctrl output or normal text. **Be just aware of not doing dangerous stuff with this. It may bug, and delete many things if the suppr key is mentionned above.**
+Conversely, we can make ctrl inputs, that makes either ctrl output or normal text. **Be just aware of not doing dangerous stuff with this, like putting the suppr key. It may bug, and delete many things.**
 
 # Special Events
 
-`keys.json`
+`part of keys.json`
 ```json
 "special_keys": {
     "end": "²end",
@@ -68,16 +68,16 @@ Conversely, we can make ctrl inputs, that makes either ctrl output or normal tex
 
 These are the special events :
 
-- The "end" makes the programm end.
-- The "reload" makes the programm reload the json.
-- The "off" makes you able the temporary disable the programm, without stopping it.
-- The "on" makes you able the able again then programm to replace what you type.
+- The "end" ends the program.
+- The "reload" reloads the json.
+- The "off" temporary disables the program, without stopping it.
+- The "on" enables the program.
 
 *Note that adding events make you able to use it, but it won't do anything. If you want to add keys, please do that in the "keys" property.*
 
 # Add external key files
 
-When you add new keys, you may want to organise your keys. That's why you can now add external files with new keys.
+When you add new keys, you may want to organise your keys. That's why you can add external files with new keys.
 
 `math.json`
 ```json
@@ -103,16 +103,12 @@ When you add new keys, you may want to organise your keys. That's why you can no
 
 In this new file, you just have to list your keys, same as before, but in the root of the file.
 
-Also, to add the file as an external file, you have to edit the `keys.json`
-Here is what you may want to put in this :
+To register it as an external file in the `keys.json`, just add the name of your file (and the extension) in the following list :
 
-`keys.json`
+`part of keys.json`
 ```json
 "external_keys": [
-    "math.json"
+    "math.json",
+    "blahblahblah.json"
 ],
 ```
-
-This property is added in the root of the file, but as it's already added in the demo, you can just use it like this.
-
-In this property, we set a list of all the external files of keys. Here I put the `math.json`, to make it connected.

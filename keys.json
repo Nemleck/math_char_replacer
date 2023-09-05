@@ -17,7 +17,7 @@
 
     "keys": [
         {
-            "input": "hey",
+            "input": "²all",
             "output": ["ctrl", "a"],
             "params": ["keep_text"]
         },
